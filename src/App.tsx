@@ -1,30 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import "./App.css";
-import Database from "@tauri-apps/plugin-sql";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
 
-  const sqlTest = async ()=>{
-        // The path 'sqlite:test.db' refers to the database file configured in the capabilities file.
-    const db = await Database.load("sqlite:test.db");
-
-    // Execute a query
-    const result = await db.execute('INSERT into users (name) VALUES (?)', ['Tauri User']);
-
-    console.log(result)
-    // Select data
-    // const users = await db.select('SELECT * FROM users');
-    // console.log(users);
-
-  }
-
-  useEffect( () => {
-    sqlTest()
-  }, [])
+ 
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/

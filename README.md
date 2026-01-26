@@ -22,10 +22,12 @@ Brain Beaver is a flip card app that helps you memorize stuff
 17. animated card UI made with Three.js LATER, but for start I'll use CSS
 18. markdown sidenotes that can be added to each deck and be used as deck description as well
 19. video and audio support for cards
-20. LATER Spaced Repetition System and notifications
+20. LATER Spaced Repetition settings and notifications for those
 21. LATER allow hiding parts of the image to test your knowledge
 22. LATER allow beeping out parts of the audio to test your knowledge
 23. no complex statistics, each deck just keeps history of your challenge mode results for each session
 24. cards and decks must be searchable via "look for card" adn "look for deck" modes
 25. card reveal timer setting for challenge mode
+26. user's confidence grade for each deck
+27. LATER 3d model viewer with conceilment for knowledge testing
 
