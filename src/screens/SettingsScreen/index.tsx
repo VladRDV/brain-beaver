@@ -1,7 +1,7 @@
 import st from "./styles.module.scss"
 
-export default function DeckCreationScreen(){
+export default function SettingsScreen(){
     return <div className={st.container}>
-        DeckCreationScreen
+        SettingsScreen
     </div>
 }
