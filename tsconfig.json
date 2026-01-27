@@ -5,6 +5,13 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "#/*": ["src/shared/styles/*"],
+      "%/*": ["src/shared/components/*"],
+      "&/*": ["public/*"],
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",

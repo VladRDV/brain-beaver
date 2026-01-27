@@ -1,0 +1,11 @@
+@use "mixins" as *;
+
+.container{
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+
+    @include addContainerStyling()
+}

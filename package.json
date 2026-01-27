@@ -13,14 +13,21 @@
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
     "@tauri-apps/plugin-sql": "~2",
+    "@tauri-apps/plugin-store": "~2.4.2",
+    "jotai": "^2.16.2",
+    "modern-normalize": "^3.0.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "wouter": "^3.9.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
+    "@types/node": "^25.0.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
+    "jotai-devtools": "^0.13.0",
+    "sass": "^1.97.3",
     "typescript": "~5.8.3",
     "vite": "^7.0.4"
   }
