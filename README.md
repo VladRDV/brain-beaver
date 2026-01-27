@@ -31,4 +31,4 @@ Brain Beaver is a flip card app that helps you memorize stuff
 26. user's confidence grade for each deck
 27. LATER 3d model viewer with conceilment for knowledge testing
 28. support for different languages
-
+29. Navigation should have "Recents" section where links to last 10 visited decks are visible

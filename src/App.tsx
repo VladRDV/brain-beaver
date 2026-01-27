@@ -8,6 +8,7 @@ import DeckEditScreen from './screens/DeckEditScreen';
 import ChallengeScreen from './screens/ChallengeScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import { routes } from './shared/constants/routes';
+import DeckOverviewScreen from './screens/DeckOverviewScreen';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path={routes.deckEdit} component={DeckEditScreen} />
         <Route path={routes.challenge} component={ChallengeScreen} />
         <Route path={routes.settings} component={SettingsScreen} />
+        <Route path={routes.deckOverview} component={DeckOverviewScreen} />
       </Switch>
     </main>
   );

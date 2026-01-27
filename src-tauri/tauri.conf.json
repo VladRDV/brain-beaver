@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "brain-beaver",
+  "productName": "Brain Beaver",
   "version": "0.1.0",
   "identifier": "com.vlad_rdv.brain-beaver",
   "build": {
@@ -12,9 +12,9 @@
   "app": {
     "windows": [
       {
-        "title": "brain-beaver",
-        "width": 800,
-        "height": 600
+        "title": "Brain Beaver",
+        "width": 1600,
+        "height": 1200
       }
     ],
     "security": {
