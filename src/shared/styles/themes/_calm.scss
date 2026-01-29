@@ -1,0 +1,29 @@
+@use "../mixins" as *;
+
+$calm-color-theme: (
+	primary1: #6b9bd1,
+	primary2: #5a8bc0,
+	primary3: #4979af,
+	success1: #7fb069,
+	success2: #6fa05a,
+	success3: #5f904b,
+	warning1: #d4a574,
+	warning2: #c49564,
+	warning3: #b48554,
+	accent1: #9bb5c8,
+	accent2: #8ba5b8,
+	accent3: #7b95a8,
+	danger1: #c97a7a,
+	danger2: #b96a6a,
+	danger3: #a95a5a,
+	bg1: #f5f7fa,
+	bg2: #e8ecf1,
+	bg3: #dbe0e8,
+	text1: #4a5568,
+	text2: #5a6578,
+	text3: #6a7588,
+);
+
+[data-theme="calm"] {
+	@include generate-css-vars-from-map($calm-color-theme, "color");
+}

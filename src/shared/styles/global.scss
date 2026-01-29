@@ -1,4 +1,18 @@
 @use 'constants' as *;
+@use "mixins" as *;
+@use "constants" as *;
+@use "themes/dark" as *;
+@use "themes/light" as *;
+@use "themes/monokai" as *;
+@use "themes/calm" as *;
+@use "themes/forest" as *;
+
+:root {
+	@include generate-css-vars-from-map(
+		$dark-color-theme,
+		"color"
+	);
+}
 
 body {
   width: 100vw;
@@ -11,6 +25,6 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: $bg2;
+    background-color: var(--color-bg2);
   }
 }

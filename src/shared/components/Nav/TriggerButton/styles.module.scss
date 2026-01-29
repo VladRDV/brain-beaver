@@ -1,0 +1,35 @@
+@use "mixins" as *;
+@use "layers" as *;
+
+$screenEdgeOffset: 5px;
+
+.container {
+    $triggerSize: clamp(30px, 3%, 80px);
+
+    --opacity: 1;
+
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: $screenEdgeOffset;
+    height: auto;
+    width: $triggerSize;
+    aspect-ratio: 1/1;
+    z-index: $layer10;
+    opacity: var(--opacity);
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+
+
+    .content {
+        display: flex;
+        flex:1;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        @include add-container-styling()
+    }
+}

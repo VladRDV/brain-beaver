@@ -1,12 +1,9 @@
 @use "constants" as *;
 
-@mixin addContainerStyling() {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $bg2;
-    color: $text1;
-    border: 1px solid $border1;
+@mixin add-container-styling() {
+    background-color: var(--color-bg2);
+    color: var(--color-text1);
+    border: 1px solid var(--color-primary1);
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -15,4 +12,50 @@
     font-family: Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+@mixin hide-scrollbar {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+@mixin generate-css-vars-from-map($theme-map, $prefix) {
+	@each $name, $color in $theme-map {
+		--#{$prefix}-#{$name}: #{$color};
+	}
+}
+
+@mixin hide-outline {
+	outline: none;
+	border-width: 0;
+	outline-width: 0;
+}
+
+@mixin add-standard-transition {
+	transition: 0.3s linear;
+}
+
+@mixin add-standard-hover-effect {
+	&:hover {
+		background-color: $dimmed-glass-01;
+	}
+}
+
+@mixin add-standard-active-effect {
+	&:active {
+		background-color: $dimmed-glass-04;
+	}
+}
+
+@mixin add-standard-bar-sizing {
+	height: $context-menu-bar-height;
+	width: 100%;
+}
+
+@mixin add-standard-font-setup {
+	font-family: var(--font1);
+	font-size: $standard-font-size;
 }

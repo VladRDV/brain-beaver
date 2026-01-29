@@ -1,0 +1,42 @@
+@use "../mixins" as *;
+
+$monokai-color-theme: (
+	// Pink/Magenta colors
+	primary1: #fd5ff0,
+	primary2: #f92adc,
+	primary3: #e610c8,
+
+	// Green colors
+	success1: #a6e22e,
+	success2: #96cc29,
+	success3: #82b324,
+
+	// Yellow/Orange colors
+	warning1: #e6db74,
+	warning2: #d6cb64,
+	warning3: #c6bb54,
+
+	// Purple colors
+	accent1: #ae81ff,
+	accent2: #9d70ef,
+	accent3: #8c5fdf,
+
+	// Red colors
+	danger1: #f92672,
+	danger2: #e91661,
+	danger3: #d90650,
+
+	// Background colors (dark)
+	bg1: #272822,
+	bg2: #2d2e2a,
+	bg3: #383934,
+
+	// Text colors (light to dark)
+	text1: #f8f8f2,
+	text2: #e8e8e2,
+	text3: #d8d8d2
+);
+
+[data-theme="monokai"] {
+	@include generate-css-vars-from-map($monokai-color-theme, "color");
+}

@@ -1,0 +1,29 @@
+@use "../mixins" as *;
+
+$light-color-theme: (
+	primary1: #0066cc,
+	primary2: #0052a3,
+	primary3: #003d7a,
+	success1: #28a745,
+	success2: #218838,
+	success3: #1e7e34,
+	warning1: #ffc107,
+	warning2: #e0a800,
+	warning3: #d39e00,
+	accent1: #17a2b8,
+	accent2: #138496,
+	accent3: #117a8b,
+	danger1: #dc3545,
+	danger2: #c82333,
+	danger3: #bd2130,
+	bg1: #ffffff,
+	bg2: #f8f9fa,
+	bg3: #e9ecef,
+	text1: #212529,
+	text2: #495057,
+	text3: #6c757d,
+);
+
+[data-theme="light"] {
+	@include generate-css-vars-from-map($light-color-theme, "color");
+}

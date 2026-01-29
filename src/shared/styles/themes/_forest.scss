@@ -1,0 +1,29 @@
+@use "../mixins" as *;
+
+$forest-color-theme: (
+	primary1: #4a7c59,
+	primary2: #3d6b4a,
+	primary3: #305a3b,
+	success1: #5a8c5a,
+	success2: #4d7a4d,
+	success3: #406840,
+	warning1: #8b6f47,
+	warning2: #7d6140,
+	warning3: #6f5339,
+	accent1: #6b8e5a,
+	accent2: #5d7c4d,
+	accent3: #4f6a40,
+	danger1: #8b5a4a,
+	danger2: #7d4d40,
+	danger3: #6f4039,
+	bg1: #2d3a2d,
+	bg2: #3a4a3a,
+	bg3: #475a47,
+	text1: #d4d4c4,
+	text2: #b8b8a8,
+	text3: #9c9c8c,
+);
+
+[data-theme="forest"] {
+	@include generate-css-vars-from-map($forest-color-theme, "color");
+}

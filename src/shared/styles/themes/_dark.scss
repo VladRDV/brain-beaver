@@ -1,0 +1,29 @@
+@use "../mixins" as *;
+
+$dark-color-theme: (
+	primary1: #9ac1f0,
+	primary2: #7ba9e6,
+	primary3: #5c91dc,
+	success1: #72fa93,
+	success2: #a0e548,
+	success3: #5ed67c,
+	warning1: #2f2815,
+	warning2: #fdb726,
+	warning3: #f5a500,
+	accent1: #ff6347,
+	accent2: #e45f2b,
+	accent3: #cc4422,
+	danger1: #e03b45,
+	danger2: #c62833,
+	danger3: #ab1f28,
+	bg1: #14142c,
+	bg2: #24273b,
+	bg3: #1d1e2c,
+	text1: #dcdfea,
+	text2: #b4b8c7,
+	text3: #8c91a3,
+);
+
+[data-theme="dark"] {
+	@include generate-css-vars-from-map($dark-color-theme, "color");
+}
