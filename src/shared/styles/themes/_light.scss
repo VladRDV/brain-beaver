@@ -25,5 +25,5 @@ $light-color-theme: (
 );
 
 [data-theme="light"] {
-	@include generate-css-vars-from-map($light-color-theme, "color");
+	@include generateCssVariablesFromMap($light-color-theme, "color");
 }

@@ -1,0 +1,34 @@
+@use "mixins" as *;
+@use "layers" as *;
+
+$screenEdgeOffset: 5px;
+
+.container {
+	$containerWidth: 85vw;
+	$containerHeight: 85vh;
+
+	--position-top-closed: -100vh;
+	--position-top-open: calc(50vh - #{$containerHeight} * 0.5);
+	--position-top: var(--position-top-closed);
+
+	display: flex;
+	width: $containerWidth;
+	height: $containerHeight;
+	position: absolute;
+	left: calc(50vw - $containerWidth * 0.5);
+	top: var(--position-top);
+	z-index: $layer30;
+	padding: $screenEdgeOffset;
+
+	@include addStandardTransition(top);
+
+	.content {
+		display: block;
+		gap: 40px;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+
+		@include addBoxStyling();
+	}
+}

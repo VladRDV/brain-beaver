@@ -25,5 +25,5 @@ $dark-color-theme: (
 );
 
 [data-theme="dark"] {
-	@include generate-css-vars-from-map($dark-color-theme, "color");
+	@include generateCssVariablesFromMap($dark-color-theme, "color");
 }

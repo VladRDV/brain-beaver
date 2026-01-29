@@ -2,7 +2,7 @@ import { RefObject, useEffect } from "react";
 
 type T_allowedElementRef = RefObject<any>;
 
-export default function useClickOut(
+export function useClickOut(
 	allowedElementsRefs: T_allowedElementRef[],
 	callback: () => void,
 ) {

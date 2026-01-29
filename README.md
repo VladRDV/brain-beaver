@@ -1,9 +1,10 @@
-Brain Beaver is a flip card app that helps you memorize stuff
+# Work In Progress
 
+Brain Beaver is a flashcard app that helps you memorize stuff
 
 ### requirements:
 
-1. CRUD of decks and text cards with proper UI and SQLite intergration
+1. CRUD for flashcard decks and text flashcards with proper UI and SQLite intergration
 2. learning mode(just read through the cards), challenge mode(go through cards and get a score at the end) and edit mode(CRUD cards and deck itself)
 3. export of decks into files, decks can all be backuped via "Export All Decks" option or 1 by 1 via "Export Deck"
 4. responsive UI, I might create a mobile build for this LATER

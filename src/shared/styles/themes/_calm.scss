@@ -25,5 +25,5 @@ $calm-color-theme: (
 );
 
 [data-theme="calm"] {
-	@include generate-css-vars-from-map($calm-color-theme, "color");
+	@include generateCssVariablesFromMap($calm-color-theme, "color");
 }

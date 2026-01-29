@@ -1,6 +1,6 @@
 import { RefObject } from "react";
 
-export default function setCSSValue(
+export function setCSSValue(
 	ref: RefObject<HTMLElement | null>,
 	valueName: string,
 	newValue: string,

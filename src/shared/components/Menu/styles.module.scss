@@ -1,0 +1,42 @@
+@use "mixins" as *;
+@use "layers" as *;
+
+$screenEdgeOffset: 5px;
+
+.container {
+	$containerWidth: clamp(220px, 20vw, 500px);
+
+	--position-left-closed: -50vw;
+	--position-left-open: 0;
+	--position-left: var(--position-left-closed);
+
+	display: flex;
+	width: $containerWidth;
+	height: 100%;
+	position: absolute;
+	left: var(--position-left);
+	top: 0;
+	z-index: $layer20;
+	padding: $screenEdgeOffset;
+
+	@include addStandardTransition(left);
+
+	.content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+
+		@include addBoxStyling();
+
+		.top {
+			flex: 1;
+		}
+
+		.bottom {
+			display: flex;
+			justify-content: flex-end;
+			background-color: var(--color-bg2);
+			height: fit-content;
+		}
+	}
+}

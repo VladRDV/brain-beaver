@@ -38,5 +38,5 @@ $monokai-color-theme: (
 );
 
 [data-theme="monokai"] {
-	@include generate-css-vars-from-map($monokai-color-theme, "color");
+	@include generateCssVariablesFromMap($monokai-color-theme, "color");
 }

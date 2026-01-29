@@ -25,5 +25,5 @@ $forest-color-theme: (
 );
 
 [data-theme="forest"] {
-	@include generate-css-vars-from-map($forest-color-theme, "color");
+	@include generateCssVariablesFromMap($forest-color-theme, "color");
 }

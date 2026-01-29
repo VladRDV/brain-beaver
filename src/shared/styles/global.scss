@@ -1,6 +1,4 @@
-@use 'constants' as *;
 @use "mixins" as *;
-@use "constants" as *;
 @use "themes/dark" as *;
 @use "themes/light" as *;
 @use "themes/monokai" as *;
@@ -8,23 +6,20 @@
 @use "themes/forest" as *;
 
 :root {
-	@include generate-css-vars-from-map(
-		$dark-color-theme,
-		"color"
-	);
+	@include generateCssVariablesFromMap($dark-color-theme, "color");
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+	width: 100vw;
+	height: 100vh;
 
-  .App {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--color-bg2);
-  }
+	.App {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		background-color: var(--color-bg2);
+	}
 }

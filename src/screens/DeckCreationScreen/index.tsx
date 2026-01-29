@@ -1,7 +1,5 @@
-import st from "./styles.module.scss"
+import st from "./styles.module.scss";
 
-export default function DeckListScreen(){
-    return <div className={st.container}>
-        DeckListScreen
-    </div>
+export function DeckCreationScreen() {
+	return <div className={st.container}>DeckCreationScreen</div>;
 }

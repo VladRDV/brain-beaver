@@ -1,6 +1,6 @@
 import { RefObject } from "react";
 
-export default function getCSSValue(
+export function getCSSValue(
 	ref: RefObject<HTMLElement | null>,
 	valueName: string,
 ) {
