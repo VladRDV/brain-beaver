@@ -1,4 +1,4 @@
-# Work In Progress
+# 🚧 Work In Progress 🚧
 
 Brain Beaver is a flashcard app that helps you memorize stuff
 
