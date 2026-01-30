@@ -13,7 +13,7 @@ $screenEdgeOffset: 5px;
 .container {
 	$containerWidth: 80px;
 
-	--position-left-closed: -20vw;
+	--position-left-closed: -1000px;
 	--position-left-open: 0;
 	--position-left: var(--position-left-closed);
 

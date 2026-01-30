@@ -7,8 +7,8 @@ $screenEdgeOffset: 5px;
 	$containerWidth: 85vw;
 	$containerHeight: 85vh;
 
-	--position-top-closed-up: -100vh;
-	--position-top-closed-down: 100vh;
+	--position-top-closed-up: -1000px;
+	--position-top-closed-down: 1000px;
 	--position-top-closed: initial;
 	--position-top-open: calc(50vh - #{$containerHeight} * 0.5);
 	--position-top: initial;
