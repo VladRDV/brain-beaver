@@ -32,3 +32,7 @@ Brain Beaver is a flashcard app that helps you memorize stuff
 26. LATER MAYBE 3d model viewer with conceilment for knowledge testing(still thinking on the idea)
 27. support for different languages
 28. Navigation should have "Recents" section where links to last 10 visited decks are visible
+
+#bugs
+
+1. on Mac on window maximize sometimes body content does not stretch to window height, it is likely this comes from tauri, but using position: absolute(crazy but works for menu button) on html might be a workaround, need to test

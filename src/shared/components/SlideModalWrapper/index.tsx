@@ -32,6 +32,7 @@ export function SlideModalWrapper({
 					"--position-top": isOpen
 						? "var(--position-top-open)"
 						: "var(--position-top-closed)",
+					"--opacity": isOpen ? "1" : "0",
 				} as CSSProperties
 			}>
 			<div className={st.content}>{children}</div>

@@ -23,6 +23,7 @@ export function Menu() {
 					"--position-left": menuIsOpen
 						? "var(--position-left-open)"
 						: "var(--position-left-closed)",
+					"--opacity": menuIsOpen ? "1" : "0",
 				} as CSSProperties
 			}>
 			<div className={st.content}>

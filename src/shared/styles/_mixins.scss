@@ -37,6 +37,15 @@
 	transition: $property 0.3s linear;
 }
 
+@mixin addDissapearingTransition($property) {
+	--opacity: 1;
+
+	opacity: var(--opacity);
+	transition:
+		$property 0.4s linear,
+		opacity 0.15s linear;
+}
+
 @mixin addStandardChildSVGStyling() {
 	svg {
 		width: 100%;

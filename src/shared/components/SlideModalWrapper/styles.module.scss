@@ -22,7 +22,7 @@ $screenEdgeOffset: 5px;
 	z-index: $layer30;
 	padding: $screenEdgeOffset;
 
-	@include addStandardTransition(top);
+	@include addDissapearingTransition(top);
 
 	.content {
 		display: block;
