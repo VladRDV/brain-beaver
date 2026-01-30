@@ -8,6 +8,7 @@ import { routes } from "./shared/constants/routes";
 import { useAtomValue } from "jotai";
 import { colorThemeIdAtom } from "./atoms/colorThemeAtom";
 import { SettingsModal } from "./shared/components/SettingsModal";
+import { TriggerButton } from "./shared/components/TriggerButton";
 
 export function App() {
 	const colorThemeId = useAtomValue(colorThemeIdAtom);
@@ -15,6 +16,7 @@ export function App() {
 	return (
 		<main data-theme={colorThemeId} className="App">
 			<Menu />
+			<TriggerButton />
 			<SettingsModal />
 
 			<Switch>

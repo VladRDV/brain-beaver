@@ -4,4 +4,5 @@ export const routes = {
 	deckOverview: "/overview/:deckId",
 	deckEdit: "/deck-edit/:deckId",
 	challenge: "/challenge/:deckId",
+	learning: "/learning/:deckId",
 };

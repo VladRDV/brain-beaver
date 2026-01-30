@@ -1,5 +1,5 @@
 import st from "./styles.module.scss";
-import { GearSVG } from "../../GearSVG";
+import { GearSVG } from "../../../GearSVG";
 import { settingsOpenAtom } from "@/atoms/settingsOpenAtom";
 import { useAtom, useSetAtom } from "jotai";
 import { menuOpenAtom } from "@/atoms/menuOpenAtom";

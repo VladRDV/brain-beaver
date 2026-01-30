@@ -29,6 +29,13 @@ $screenEdgeOffset: 5px;
 		@include addBoxStyling();
 
 		.top {
+			display: flex;
+			justify-content: space-between;
+			background-color: var(--color-bg2);
+			height: fit-content;
+		}
+
+		.middle {
 			flex: 1;
 		}
 
