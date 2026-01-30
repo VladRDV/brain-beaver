@@ -9,7 +9,7 @@ import { useAtomValue } from "jotai";
 import { colorThemeIdAtom } from "./atoms/colorThemeAtom";
 import { SettingsModal } from "./shared/components/SettingsModal";
 import { TriggerButton } from "./shared/components/TriggerButton";
-import { UserManualScreen } from "./screens/UserManualScreen";
+import { UserManualModal } from "./shared/components/UserManualModal";
 
 export function App() {
 	const colorThemeId = useAtomValue(colorThemeIdAtom);
@@ -19,6 +19,7 @@ export function App() {
 			<Menu />
 			<TriggerButton />
 			<SettingsModal />
+			<UserManualModal />
 
 			<Switch>
 				<Route path={routes.deckList} component={DeckListScreen} />
@@ -26,7 +27,6 @@ export function App() {
 					path={routes.deckCreate}
 					component={DeckCreationScreen}
 				/>
-				<Route path={routes.manual} component={UserManualScreen} />
 			</Switch>
 		</main>
 	);

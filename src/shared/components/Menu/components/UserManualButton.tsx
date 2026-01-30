@@ -1,20 +1,19 @@
-import { useSetAtom } from "jotai";
+import { useAtom, useSetAtom } from "jotai";
 import { menuOpenAtom } from "@/atoms/menuOpenAtom";
-import { routes } from "@/shared/constants/routes";
-import { useLocation, useRoute } from "wouter";
 import { QuestionMarkSVG } from "@/shared/svg/QuestionMarkSVG";
 import { IconButtonWrapper } from "./IconButtonWrapper";
+import { userManualOpenAtom } from "@/atoms/userManualOpenAtom";
 
 export function UserManualButton() {
 	const setMenuIsOpen = useSetAtom(menuOpenAtom);
-	const [match] = useRoute(routes.manual);
-	const [, navigate] = useLocation();
+	const [userManualIsOpen, setUserManualIsOpen] =
+		useAtom(userManualOpenAtom);
 
 	return (
 		<IconButtonWrapper
-			disabled={match}
+			disabled={userManualIsOpen}
 			onClick={() => {
-				navigate(routes.manual);
+				setUserManualIsOpen(true);
 				setMenuIsOpen(false);
 			}}>
 			<QuestionMarkSVG />

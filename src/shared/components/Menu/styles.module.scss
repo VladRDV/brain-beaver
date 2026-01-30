@@ -11,18 +11,18 @@ $screenEdgeOffset: 5px;
 }
 
 .container {
-	$containerWidth: clamp(220px, 20vw, 500px);
+	$containerWidth: 80px;
 
-	--position-left-closed: -50vw;
+	--position-left-closed: -20vw;
 	--position-left-open: 0;
 	--position-left: var(--position-left-closed);
 
 	display: flex;
 	width: $containerWidth;
-	height: 100%;
+	height: fit-content;
 	position: absolute;
 	left: var(--position-left);
-	top: 0;
+	bottom: 0;
 	z-index: $layer20;
 	padding: $screenEdgeOffset;
 
@@ -34,17 +34,5 @@ $screenEdgeOffset: 5px;
 		flex-direction: column;
 
 		@include addBoxStyling();
-
-		.top {
-			@include addTopAndBottomStyling;
-		}
-
-		.middle {
-			flex: 1;
-		}
-
-		.bottom {
-			@include addTopAndBottomStyling;
-		}
 	}
 }

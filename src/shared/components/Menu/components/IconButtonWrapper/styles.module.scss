@@ -4,7 +4,7 @@
 $edgeOffset: 5px;
 
 .container {
-	$triggerSize: clamp(30px, 20%, 80px);
+	$triggerSize: 100%;
 
 	display: flex;
 	padding: $edgeOffset;
