@@ -3,6 +3,13 @@
 
 $screenEdgeOffset: 5px;
 
+@mixin addTopAndBottomStyling() {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--color-bg2);
+	height: fit-content;
+}
+
 .container {
 	$containerWidth: clamp(220px, 20vw, 500px);
 
@@ -29,10 +36,7 @@ $screenEdgeOffset: 5px;
 		@include addBoxStyling();
 
 		.top {
-			display: flex;
-			justify-content: space-between;
-			background-color: var(--color-bg2);
-			height: fit-content;
+			@include addTopAndBottomStyling;
 		}
 
 		.middle {
@@ -40,10 +44,7 @@ $screenEdgeOffset: 5px;
 		}
 
 		.bottom {
-			display: flex;
-			justify-content: flex-end;
-			background-color: var(--color-bg2);
-			height: fit-content;
+			@include addTopAndBottomStyling;
 		}
 	}
 }

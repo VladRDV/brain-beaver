@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { BurgerSVG } from "@/shared/components/BurgerSVG";
+import { BurgerSVG } from "@/shared/svg/BurgerSVG";
 import { setCSSValue } from "@/shared/functions/setCSSValue";
 import st from "./styles.module.scss";
 import { useAtom } from "jotai";

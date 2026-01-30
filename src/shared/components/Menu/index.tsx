@@ -4,11 +4,11 @@ import { useClickOut } from "@/shared/hooks/useClickOut";
 import { setCSSValue } from "@/shared/functions/setCSSValue";
 import { useAtom } from "jotai";
 import { menuOpenAtom } from "@/atoms/menuOpenAtom";
-import { TriggerButton } from "../TriggerButton";
 import { SettingsButton } from "./components/SettingsButton";
 import { getCSSValue } from "@/shared/functions/getCSSValue";
-import { Link } from "wouter";
-import { routes } from "@/shared/constants/routes";
+import { CreateDeckButton } from "./components/CreateDeckButton";
+import { DeckListButton } from "./components/DeckListButton";
+import { UserManualButton } from "./components/UserManualButton";
 
 export function Menu() {
 	const [menuIsOpen, setMenuIsOpen] = useAtom(menuOpenAtom);
@@ -37,11 +37,12 @@ export function Menu() {
 		<div ref={containerRef} className={st.container}>
 			<div className={st.content}>
 				<div className={st.top}>
-					<Link href={routes.deckCreate}>New Deck</Link>
-					<Link href={routes.deckList}>All Decks</Link>
+					<DeckListButton />
+					<CreateDeckButton />
 				</div>
 				<div className={st.middle}></div>
 				<div className={st.bottom}>
+					<UserManualButton />
 					<SettingsButton />
 				</div>
 			</div>

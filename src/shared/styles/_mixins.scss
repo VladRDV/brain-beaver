@@ -6,6 +6,7 @@
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 	text-align: center;
 	font-size: 16px;
+	overflow: hidden;
 	font-weight: bold;
 	font-family: Arial, sans-serif;
 	text-transform: uppercase;
@@ -34,4 +35,38 @@
 
 @mixin addStandardTransition($property) {
 	transition: $property 0.3s linear;
+}
+
+@mixin addStandardChildSVGStyling() {
+	svg {
+		width: 100%;
+		height: 100%;
+
+		path {
+			fill: var(--color-primary1);
+
+			@include addStandardTransition(fill);
+		}
+	}
+
+	&:hover {
+		svg {
+			path {
+				fill: var(--color-accent1);
+			}
+		}
+	}
+
+	&:active {
+		svg {
+			path {
+				fill: var(--color-accent3);
+			}
+		}
+	}
+
+	&:disabled {
+		pointer-events: none;
+		opacity: 0.2;
+	}
 }
