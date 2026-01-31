@@ -1,8 +1,9 @@
 import { CSSProperties } from "react";
-import { BurgerSVG } from "@/shared/svg/BurgerSVG";
+import { WindowSVG } from "@/shared/components/IconButtonWrapper/components/WindowSVG";
 import st from "./styles.module.scss";
 import { useAtom } from "jotai";
 import { menuOpenAtom } from "@/atoms/menuOpenAtom";
+import { IconButtonWrapper } from "../IconButtonWrapper";
 
 export function TriggerButton({}) {
 	const [menuIsOpen, setMenuIsOpen] = useAtom(menuOpenAtom);
@@ -15,10 +16,10 @@ export function TriggerButton({}) {
 					"--opacity": menuIsOpen ? "0" : "1",
 				} as CSSProperties
 			}>
-			<div
-				className={st.content}
-				onClick={() => setMenuIsOpen(true)}>
-				<BurgerSVG />
+			<div className={st.content}>
+				<IconButtonWrapper onClick={() => setMenuIsOpen(true)}>
+					<WindowSVG />
+				</IconButtonWrapper>
 			</div>
 		</div>
 	);

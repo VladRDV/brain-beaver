@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	width: 100%;
+
+	.counter {
+		width: 60px;
+	}
+	.button {
+		width: 50px;
+	}
+}

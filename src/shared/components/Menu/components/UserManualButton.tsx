@@ -1,7 +1,7 @@
 import { useAtom, useSetAtom } from "jotai";
 import { menuOpenAtom } from "@/atoms/menuOpenAtom";
-import { QuestionMarkSVG } from "@/shared/svg/QuestionMarkSVG";
-import { IconButtonWrapper } from "./IconButtonWrapper";
+import { QuestionMarkSVG } from "@/shared/components/IconButtonWrapper/components/QuestionMarkSVG";
+import { IconButtonWrapper } from "../../IconButtonWrapper";
 import { userManualOpenAtom } from "@/atoms/userManualOpenAtom";
 
 export function UserManualButton() {
