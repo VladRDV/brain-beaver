@@ -1,7 +1,18 @@
 import { atom } from "jotai";
 
-type T_ColorThemeId = "dark" | "light" | "monokai" | "calm" | "forest";
+export enum LightColorThemeIds {
+	CALM = "calm",
+	LIGHT = "light",
+}
 
-export const initialValue: T_ColorThemeId = "light";
+export enum DarkColorThemeIds {
+	DARK = "dark",
+	MONOKAI = "monokai",
+	FOREST = "forest",
+}
 
-export const colorThemeIdAtom = atom<T_ColorThemeId>(initialValue);
+export type ColorThemeId = LightColorThemeIds | DarkColorThemeIds;
+
+export const initialValue: ColorThemeId = DarkColorThemeIds.FOREST;
+
+export const colorThemeIdAtom = atom<ColorThemeId>(initialValue);
