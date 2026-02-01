@@ -1,3 +1,4 @@
+import st from "./styles.module.scss";
 import {
 	ColorThemeId,
 	colorThemeIdAtom,
@@ -22,8 +23,9 @@ export function ThemeSelector() {
 		));
 	}
 	return (
-		<div className="container">
-			<div className="content">
+		<div className={st.container}>
+			<label className={st.content}>
+				<span>Select a color theme</span>
 				<select
 					name="Select a color theme"
 					multiple={false}
@@ -39,7 +41,7 @@ export function ThemeSelector() {
 						{renderThemeList(LightColorThemeIds)}
 					</optgroup>
 				</select>
-			</div>
+			</label>
 		</div>
 	);
 }
