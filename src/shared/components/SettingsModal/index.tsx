@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { SlideModalWrapper } from "../SlideModalWrapper";
 import { settingsOpenAtom } from "@/atoms/settingsOpenAtom";
-import { ThemeSelector } from "./components/ThemeSelector";
+import { ColorThemeSelector } from "./components/ColorThemeSelector";
 
 export function SettingsModal() {
 	const [settingsIsOpen, setSettingsIsOpen] = useAtom(settingsOpenAtom);
@@ -11,7 +11,7 @@ export function SettingsModal() {
 			slideOutDirection={"up"}
 			isOpen={settingsIsOpen}
 			closeModal={() => setSettingsIsOpen(false)}>
-			<ThemeSelector />
+			<ColorThemeSelector />
 		</SlideModalWrapper>
 	);
 }

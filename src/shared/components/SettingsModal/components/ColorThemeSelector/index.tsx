@@ -7,20 +7,25 @@ import {
 } from "@/atoms/colorThemeAtom";
 import { useAtom } from "jotai";
 
-export function ThemeSelector() {
+export function ColorThemeSelector() {
 	const [colorThemeId, setColorThemeId] = useAtom(colorThemeIdAtom);
 
-	function renderThemeList<T>(themeIds: T) {
-		const themeArr = [];
-		for (let key in themeIds) {
-			themeArr.push(themeIds[key]);
-		}
-
-		return themeArr.map((el) => (
-			<option key={el as string} selected={el === colorThemeId}>
-				{el as string}
+	function renderColorThemeList<T>(themeIds: T) {
+		return defineColorThemeList(themeIds).map((el) => (
+			<option key={el} selected={el === colorThemeId}>
+				{el}
 			</option>
 		));
+	}
+
+	function defineColorThemeList<T>(themeIds: T): string[] {
+		const colorThemeArr = [];
+
+		for (let key in themeIds) {
+			colorThemeArr.push(themeIds[key]);
+		}
+
+		return colorThemeArr as string[];
 	}
 	return (
 		<div className={st.container}>
@@ -35,10 +40,10 @@ export function ThemeSelector() {
 						);
 					}}>
 					<optgroup label="Dark themes">
-						{renderThemeList(DarkColorThemeIds)}
+						{renderColorThemeList(DarkColorThemeIds)}
 					</optgroup>
 					<optgroup label="Light themes">
-						{renderThemeList(LightColorThemeIds)}
+						{renderColorThemeList(LightColorThemeIds)}
 					</optgroup>
 				</select>
 			</label>
