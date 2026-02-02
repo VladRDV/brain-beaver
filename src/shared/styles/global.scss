@@ -5,8 +5,91 @@
 @use "themes/calm" as *;
 @use "themes/forest" as *;
 
+@font-face {
+	font-family: "Noto Sans";
+	src: url("/fonts/noto-sans/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-stretch: 75% 125%;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	src: url("/fonts/noto-sans/Noto_Sans/NotoSans-Italic-VariableFont_wdth,wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-stretch: 75% 125%;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Noto Sans Arabic";
+	src: url("/fonts/noto-sans/Noto_Sans_Arabic/NotoSansArabic-VariableFont_wdth,wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-stretch: 75% 125%;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Noto Sans Hebrew";
+	src: url("/fonts/noto-sans/Noto_Sans_Hebrew/NotoSansHebrew-VariableFont_wdth,wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-stretch: 75% 125%;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Noto Sans JP";
+	src: url("/fonts/noto-sans/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Noto Sans KR";
+	src: url("/fonts/noto-sans/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Noto Sans SC";
+	src: url("/fonts/noto-sans/Noto_Sans_SC/NotoSansSC-VariableFont_wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Noto Sans TC";
+	src: url("/fonts/noto-sans/Noto_Sans_TC/NotoSansTC-VariableFont_wght.ttf")
+		format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
 :root {
+	--app-font: "Noto Sans", system-ui, sans-serif;
+
 	@include generateCssVariablesFromMap($dark-color-theme, "color");
+}
+
+body {
+	font-family: var(--app-font);
+	//  "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC",
 }
 
 html,

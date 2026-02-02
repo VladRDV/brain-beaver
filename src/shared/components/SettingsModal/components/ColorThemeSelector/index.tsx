@@ -2,19 +2,18 @@ import st from "./styles.module.scss";
 import {
 	ColorThemeId,
 	colorThemeIdAtom,
+	initialValue,
 	DarkColorThemeIds,
 	LightColorThemeIds,
 } from "@/atoms/colorThemeAtom";
-import { useAtom } from "jotai";
+import { useSetAtom } from "jotai";
 
 export function ColorThemeSelector() {
-	const [colorThemeId, setColorThemeId] = useAtom(colorThemeIdAtom);
+	const setColorThemeId = useSetAtom(colorThemeIdAtom);
 
 	function renderColorThemeList<T>(themeIds: T) {
 		return defineColorThemeList(themeIds).map((el) => (
-			<option key={el} selected={el === colorThemeId}>
-				{el}
-			</option>
+			<option key={el}>{el}</option>
 		));
 	}
 
@@ -33,6 +32,7 @@ export function ColorThemeSelector() {
 				<span>Select a color theme</span>
 				<select
 					name="Select a color theme"
+					defaultValue={initialValue}
 					multiple={false}
 					onChange={(event) => {
 						setColorThemeId(
